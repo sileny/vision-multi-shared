@@ -1,0 +1,41 @@
+{
+  "name": "vision-multi-shared",
+  "version": "0.0.3",
+  "private": true,
+  "dependencies": {
+    "@alifd/next": "^1.x",
+    "@module-federation/enhanced": "^0.6.0",
+    "classnames": "^2.0.0",
+    "prop-types": "^15.7.2"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=8192 sto-build-scripts start",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 sto-build-scripts build",
+    "vision": "vdev start --vision",
+    "dev": "webpack-dev-server --env development",
+    "build-": "tnpm run build:babel",
+    "build:webpack": "webpack --mode production",
+    "build:watch": "webpack --watch --mode development",
+    "build:babel": "vdev build --babel",
+    "build:script": "vdev build --script -V",
+    "all": "npm run build && vdev start --run-build -m @ali/vu-fusion-style-basic",
+    "add": "vdev new --component",
+    "prepublishOnly": "npm run build:babel",
+    "patch": "npm version patch -m 'Update Version Patch by NPM' && git push --tag",
+    "minor": "npm version minor -m 'Update Version Minor by NPM' && git push --tag",
+    "major": "npm version major -m 'Update Version Major by NPM' && git push --tag"
+  },
+  "devDependencies": {
+    "@alicd/build-plugin-component-babel-plugins": "^0.3.0",
+    "@alicd/ts-config-cone": "^0.1.27",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "babel-plugin-import": "^1.13.3",
+    "build-plugin-cone-analyse-component": "^0.1.0",
+    "cross-env": "^7.0.3",
+    "next-build-plugin-component": "^1.12.6",
+    "next-build-plugin-cone-component": "^0.3.2",
+    "sto-build-scripts": "^1.3.0"
+  },
+  "homepage": "https://unpkg.com/vision-multi-shared@0.0.3/build/index.html"
+}

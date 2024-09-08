@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>vision-multi-demo</title>
+	</head>
+	<body>
+		<script>
+			window.pageConfig = {
+				RE_VERSION: "{{renderEngineVersion}}", // 指定RE引擎版本
+				device: "{{device}}",
+				designerConfigs: {
+					modules: {
+						logicJS: {
+							defaultActionType: "page", // 动作面板自动选中'页面JS'
+							enablePageFunction: true, // 开放页面JS
+							enableGlobalFunction: false,
+						},
+					},
+				},
+			};
+		</script>
+		<script src="https://g.alicdn.com/toffee/c/??jquery/1.11.3/dist/jquery.min.js,react/16.8.6/react.min.js,react-dom/16.8.6/react-dom.min.js,react15-polyfill/0.0.1/dist/index.js,react-router/4.1.1/dist/umd/react-router.min.js,react-router-dom/4.2.2/umd/react-router-dom.min.js,lodash/4.6.1/lodash.min.js,prop-types/15.6.2/prop-types.js,tinymce/tinymce-full.min.js"></script>
+		<script src="https://g.alicdn.com/code/lib/moment.js/2.24.0/moment.js"></script>
+		<script src="https://g.alicdn.com/vision/visualengine/5.3.0/engine.min.js"></script>
+		<script src="https://g.alicdn.com/vision/visualengine-utils/4.3.1/engine-utils.min.js"></script>
+		<script src="../../cone-next/dist/next.js"></script>
+		<script src="../../cone-deep/dist/deep.js"></script>
+		<script src="../../cone-spread-sheets-table/dist/spread-sheets-table.js"></script>
+		<script src="../dist/protoIndex.js"></script>
+		<script>
+			console.log("Next");
+			console.log(Next);
+			console.log("Deep");
+			console.log(Deep);
+			console.log("SpreadSheetsTable");
+			console.log(SpreadSheetsTable);
+			console.log("vision-multi-demo");
+			console.log(window[""]);
+		</script>
+	</body>
+</html>

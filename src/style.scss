@@ -1,0 +1,59 @@
+@import '~@ali/deep/lib/employee-search/main.scss';
+@import '~@ali/deep/lib/page-header/main.scss';
+@import '~@ali/deep/lib/pickable/main.scss';
+@import '~@ali/deep/lib/number-info/main.scss';
+@import '~@ali/deep/lib/money-input/main.scss';
+@import '~@ali/deep/lib/deep-table/main.scss';
+@import '~@ali/deep/lib/image-viewer/main.scss';
+@import '~@ali/deep/lib/select/main.scss';
+@import '~@ali/deep/lib/tree-select/main.scss';
+@import '~@ali/deep/lib/cascader-select/main.scss';
+@import '~@ali/deep/lib/dropdown/main.scss';
+@import '~@ali/deep/lib/date-picker/main.scss';
+@import '~@ali/deep/lib/time-picker/main.scss';
+@import '~@ali/deep/lib/pagination/main.scss';
+@import '~@ali/deep/lib/loading/main.scss';
+@import '~@ali/deep/lib/tree/main.scss';
+@import '~@ali/deep/lib/button-group/main.scss';
+@import '~@ali/deep/lib/illustration/main.scss';
+@import '~@ali/deep/lib/checkbox/main.scss';
+@import '~@ali/deep/lib/radio/main.scss';
+@import '~@ali/deep/lib/editable-tag/main.scss';
+@import '~@ali/deep/lib/filter/main.scss';
+@import '~@ali/deep/lib/state-bar/main.scss';
+@import '~@alife/crui-detail/index.scss';
+
+.deep-table-web-table {
+  .next-table {
+    .next-table-header {
+      th {
+        // 覆盖样式: vc-deep组件中table写死了表头颜色导致rookie主题配置不生效
+        background: $table-th-bg;
+        background: var(--table-th-bg, $table-th-bg);
+        // 表头message按钮
+        .next-icon-prompt-filling:before {
+          content: $icon-content-help;
+          content: var(--icon-content-help, $icon-content-help);
+        }
+      }
+    }
+    .deep-table-action-cell {
+      .next-btn-text.next-medium {
+        // 覆盖样式: rookie主题配置导致表格操作区内按钮太大
+        height: 20px;
+        font-size: 12px;
+      }
+    }
+    // 覆盖样式: table展开图标呗deep覆盖,此处反向覆盖还原
+    .next-table-cell.next-table-expanded {
+      .next-icon-add:before {
+        content: $icon-content-add;
+        content: var(--table-expand-fold-icon-content, $icon-content-add);
+      }
+      .next-icon-minus:before {
+        content: $icon-content-minus;
+        content: var(--table-expand-unfold-icon-content, $icon-content-minus);
+      }
+    }
+  }
+}

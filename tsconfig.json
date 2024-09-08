@@ -1,0 +1,35 @@
+{
+  "extends": "@alicd/ts-config-cone/tsconfig.base.json",
+  "include": [
+    "src",
+    "stories",
+    "*.d.ts",
+    "__tests__",
+    "packages/**/src",
+    "packages/**/stories",
+    "packages/**/*.d.ts",
+    "packages/**/__tests__",
+    "test"
+  ],
+  "exclude": ["node_modules", "build", "dist", "es", "lib"],
+  "types": ["node", "jest"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "allowJs": false,
+    "paths": {
+      "src/*": ["./src/*"],
+      "@/*": ["./src/*"],
+      "$src/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  }
+}
