@@ -4,27 +4,6 @@
     "alilowcode": true,
     "declaration": false
   },
-  "mf2config": {
-    "publicPath": "./dist",
-    "options": {
-      "name": "vision_multi_shared",
-      "filename": "remoteEntry.js",
-      "remotes": {
-        "tcc": "tcc@https://localhost:8080/remoteEntry.js"
-      },
-      "exposes": {
-        "./hello": "./src/components/hello/index.jsx"
-      },
-      "shared": {
-        "react-dom": {
-          "singleton": true
-        },
-        "react": {
-          "singleton": true
-        }
-      }
-    }
-  },
   "filename": "vision-multi-shared",
   "library": "vision-multi-shared",
   "libraryTarget": "umd",
@@ -41,7 +20,30 @@
     "next-build-plugin-component",
     "next-build-plugin-cone-component",
     "build-plugin-cone-analyse-component",
-    "./local-plugins/mf.js",
+    [
+      "build-plugin-module-federation-v2",
+      {
+        "publicPath": "./dist",
+        "options": {
+          "name": "vision_multi_shared",
+          "filename": "remoteEntry.js",
+          "remotes": {
+            "tcc": "tcc@https://localhost:8080/remoteEntry.js"
+          },
+          "exposes": {
+            "./hello": "./src/components/hello/index.jsx"
+          },
+          "shared": {
+            "react-dom": {
+              "singleton": true
+            },
+            "react": {
+              "singleton": true
+            }
+          }
+        }
+      }
+    ],
     "./local-plugins"
   ]
 }

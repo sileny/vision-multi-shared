@@ -32,6 +32,7 @@
     "babel-plugin-add-module-exports": "^1.0.4",
     "babel-plugin-import": "^1.13.3",
     "build-plugin-cone-analyse-component": "^0.1.0",
+    "build-plugin-module-federation-v2": "^0.0.3",
     "cross-env": "^7.0.3",
     "next-build-plugin-component": "^1.12.6",
     "next-build-plugin-cone-component": "^0.3.2",
