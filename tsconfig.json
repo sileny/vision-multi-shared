@@ -1,5 +1,4 @@
 {
-  "extends": "@alicd/ts-config-cone/tsconfig.base.json",
   "include": [
     "src",
     "stories",
@@ -21,15 +20,6 @@
       "src/*": ["./src/*"],
       "@/*": ["./src/*"],
       "$src/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      },
-      {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true
-      }
-    ]
+    }
   }
 }

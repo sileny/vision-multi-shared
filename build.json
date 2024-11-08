@@ -16,10 +16,8 @@
     "@alife/vision-utils-property": "VisionUtilsProperty"
   },
   "plugins": [
-    "@alicd/build-plugin-component-babel-plugins",
     "next-build-plugin-component",
     "next-build-plugin-cone-component",
-    "build-plugin-cone-analyse-component",
     [
       "build-plugin-module-federation-v2",
       {
