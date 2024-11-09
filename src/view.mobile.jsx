@@ -1,3 +1,3 @@
-import View from '../src/index';
+import View from '.';
 
 export default View;
